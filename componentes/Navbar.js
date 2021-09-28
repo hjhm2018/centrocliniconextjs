@@ -1,21 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import { Nav, Navbar } from 'react-bootstrap';
-// import { StaticImage } from "gatsby-plugin-image"
+import Image from 'next/image'
+import logo from '../assets/imagenes/logo.png'
 
 const Navigationbar = () => {
     return (
         <div>
             <Navbar collapseOnSelect expand='lg' bg="light" variant="light" sticky="top">
-                <Navbar.Brand as={Link} href='/'>
-                    {/* <StaticImage
-                        src="../assets/imagenes/logo.png"
-                        alt="Logo"
-                        placeholder="blurred"
-                        layout="fixed"
-                        width={250}
-                    /> */}
-                    Link
+                <Navbar.Brand style={{ cursor: 'pointer' }}>
+                    <Link href='/'>
+                        <a>
+                            <Image src={logo} alt="logo" width={250} height={60} />
+                        </a>
+                    </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
