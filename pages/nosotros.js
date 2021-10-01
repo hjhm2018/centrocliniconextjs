@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Nosotros from '../componentes/componentesInicio/Nosotros'
 
 const nosotros = () => {
     return (
@@ -8,7 +9,7 @@ const nosotros = () => {
                 <meta name="description" content="Pagina de Nosotros" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            Nosotros
+            <Nosotros />
         </div>
     )
 }

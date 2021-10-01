@@ -1,0 +1,9 @@
+.nosotrosItem{
+    height: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+    .nosotrosItem{
+        height: 200px;
+    }
+}

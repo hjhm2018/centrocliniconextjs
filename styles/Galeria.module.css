@@ -1,0 +1,9 @@
+.galeriaItem{
+    height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+    .galeriaItem{
+        height: 300px;
+    }
+}
