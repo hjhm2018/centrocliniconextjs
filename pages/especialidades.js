@@ -3,22 +3,8 @@ import especialidadesData from '../assets/data/especialidades'
 import React, { useState } from 'react';
 import { Card, Button, Modal } from 'react-bootstrap'
 import Image from 'next/image'
+import { FaMedkit } from "react-icons/fa";
 
-// export const getStaticProps = async () => {
-//     const res = await fetch('http://localhost:3000/assets/data/especialidades.json', {
-//         method: "GET",
-//         headers: {
-//             "Content-Type": "application / json"
-//         }
-//     });
-
-//     const data = await res.json();
-//     const newData = JSON.parse(data);
-
-//     return {
-//         props: { especialidadesData: newData }
-//     }
-// }
 
 const especialidades = () => {
 
@@ -42,15 +28,15 @@ const especialidades = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="col-12">
-                <h2 className="text-center bg-info text-white rounded p-2">Especialidades</h2>
+                <h2 className="text-center bg-info text-white rounded p-2">Especialidades <FaMedkit /></h2>
             </div>
             <div className="d-none d-md-block mx-auto col-10 text-center mb-2">
                 {especialidadesData && especialidadesData.sort(function (a, b) {
                     return a.nombre.localeCompare(b.nombre);
                 }).map((especialidad, index) => (
                     index % 2 === 0 ?
-                        <span class="badge badge-info m-1" role="button" onClick={() => setEspecialidadNombre(`${especialidad.nombre.toLowerCase()}`)}>#{especialidad.nombre}</span> :
-                        <span class="badge badge-secondary m-1" role="button" onClick={() => setEspecialidadNombre(`${especialidad.nombre.toLowerCase()}`)}>#{especialidad.nombre}</span>
+                        <span key={index} className="badge badge-info m-1" role="button" onClick={() => setEspecialidadNombre(`${especialidad.nombre.toLowerCase()}`)}>#{especialidad.nombre}</span> :
+                        <span key={index} className="badge badge-secondary m-1" role="button" onClick={() => setEspecialidadNombre(`${especialidad.nombre.toLowerCase()}`)}>#{especialidad.nombre}</span>
                 ))}
             </div>
             <div className="text-center mx-auto col-10">

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import especialistasData from '../assets/data/especialistas'
 import especialidadesData from '../assets/data/especialidades'
-
+import { FaNotesMedical } from "react-icons/fa";
 
 const especialistas = () => {
 
@@ -17,7 +17,7 @@ const especialistas = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className="col-12">
-                <h2 className="text-center bg-info text-white rounded p-2">Especialistas</h2>
+                <h2 className="text-center bg-info text-white rounded p-2">Especialistas <FaNotesMedical /></h2>
             </div>
             <div className="col-12 mx-auto d-flex justify-content-center flex-wrap">
                 <div className="col-md-6 col-12 mx-auto p-2">
