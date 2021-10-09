@@ -5,7 +5,6 @@ import { Card, Button, Modal } from 'react-bootstrap'
 import Image from 'next/image'
 import { FaMedkit } from "react-icons/fa";
 
-
 const especialidades = () => {
 
     const [modalContenido, setModalContenido] = useState({ titulo: '', descripcion: '' });
